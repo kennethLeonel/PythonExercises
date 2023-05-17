@@ -2,6 +2,7 @@
 import seaborn as sns 
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 
 #################################
 print("-------Sección Matrix plots--------")
@@ -40,3 +41,21 @@ plt.show()
 
 
 
+print ("-------Ejemplos de multiples values en el pivotTble")
+
+# Crear un DataFrame de ejemplo
+data = {'A': ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'],
+        'B': ['one', 'one', 'two', 'two', 'one', 'one'],
+        'C': [1, 2, 3, 4, 5, 6],
+        'D': [7, 8, 9, 10, 11, 12],
+        'E': [13, 14, 15, 16, 17, 18]}
+df = pd.DataFrame(data)
+
+# Crear una tabla dinámica con múltiples valores
+pivot = df.pivot_table(values=['C', 'D', 'E'], index='A', columns='B', aggfunc='sum')
+print (pivot)
+
+# Crear el heatmap
+sns.heatmap(pivot, cmap='coolwarm', annot=True )
+
+plt.show()
