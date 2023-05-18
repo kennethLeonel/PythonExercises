@@ -5,6 +5,7 @@ print(palabra)
  
 pl = "abcdefghijklmnopqrstuvwxyz"
 print(pl[:6])
+print ("---------------Parte 1-----------------")
 res = "aBcdefas"
 ## metodos de los arrays
 print(res.upper()) # convierte a mayusculas
