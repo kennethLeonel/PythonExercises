@@ -65,10 +65,7 @@ sns.catplot(x='day',y='total_bill',data=tips, kind='bar')
 plt.show()
 
 
-print("-------Sección Matrix plots--------")
 
-datosTips = sns.load_dataset('tips') # Es un dataset que ya tiene la librería 
-print(datosTips.head())
 
 
 
